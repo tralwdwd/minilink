@@ -15,7 +15,7 @@ class MiniLinkClient {
         let Id = ID.unique();
         let code = makeShortCode(Id);
         await this.database.createRow({
-            databaseId: "68ade7f6002a4a177e2f",
+            databaseId: "minilink",
             tableId: "links",
             rowId: Id,
             data: { url, code },
@@ -25,7 +25,7 @@ class MiniLinkClient {
     getUrl = async (code: string) => {
         let result = await this.database.listRows(
             {
-                databaseId: "68ade7f6002a4a177e2f",
+                databaseId: "minilink",
                 tableId: "links",
                 queries: [
                     Query.equal("code", code)

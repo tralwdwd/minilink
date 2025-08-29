@@ -2,6 +2,8 @@
 import { miniLinkClient } from "@/lib/links/client";
 import { useState } from "react";
 
+// TODO: Fix Mobile Responsiveness and layout
+
 export default function Home() {
   const [url, setUrl] = useState("");
   const [shortened, setShortened] = useState("");
@@ -36,6 +38,7 @@ export default function Home() {
           onChange={(e) => setUrl(e.target.value)}
           className="border rounded-xl p-2 h-10 w-96 bg-gray-100 text-[rgb(17,24,39)]"
           autoFocus
+          maxLength={2048}
         />
         <button
           className="bg-gray-300 text-[#111827] rounded-xl h-10 p-1.5 cursor-pointer"
